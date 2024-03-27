@@ -15,7 +15,7 @@ function ItemCard({ product }) {
           />
         </Link>
         <Card.Body className="d-flex flex-column justify-content-evenly">
-          <Card.Title style={{ fontSize: "0.85em" }}>
+          <Card.Title style={{ fontSize: "1rem" }}>
             {product.title}
           </Card.Title>
           <Card.Text className=" h4">$ {product.price}</Card.Text>
