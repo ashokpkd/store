@@ -14,7 +14,6 @@ const CategoryItemPage = () => {
         );
         const data = await response.json();
         setCategoryItems(data);
-        console.log(data);
       } catch (error) {
         console.error(error, "fetching error");
       }

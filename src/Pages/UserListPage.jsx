@@ -4,7 +4,6 @@ import UserCard from "../Components/UserCard";
 
 const UserListPage = () => {
   const [user, setUser] = useState(null);
-  console.log(user);
   useEffect(() => {
     const getAllUser = async () => {
       try {
@@ -29,7 +28,7 @@ const UserListPage = () => {
           gap: "5vh",
         }}
       >
-        {user && user.map((user) => <UserCard user={user} />)}
+        {user && user.map((user) => <UserCard user={user} key={user.id} />)}
       </div>
     </div>
   );

@@ -5,7 +5,6 @@ import CategoryCard from "../Components/CategoryCard";
 
 const CategoriesPage = () => {
   const { categories } = useCategories();
-  console.log(categories);
   return (
     <div>
       <Navbar />
@@ -19,7 +18,9 @@ const CategoriesPage = () => {
         }}
       >
         {categories &&
-          categories.map((category) => <CategoryCard category={category} />)}
+          categories.map((category) => (
+            <CategoryCard category={category} key={category.id} />
+          ))}
       </div>
     </div>
   );
